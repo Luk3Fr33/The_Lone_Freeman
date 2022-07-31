@@ -2,10 +2,10 @@ import turtle
 
 def forw():
     turtle.forward(10) # Values subject to change
-
+    
 def back():
-    turtle.forward(10) # Values sunject to change
-
+    turtle.backward(10) # Values sunject to change
+    
 def left():
     turtle.left(90)    # Values sunject to change
 
