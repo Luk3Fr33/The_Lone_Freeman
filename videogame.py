@@ -14,7 +14,7 @@ def forw():
     elif turtle.ycor() < -270.0:
         turtle.reset()
     obst(turtle,xpositions, ypositions)
-    collision(xpositions, ypositions)
+    
 def back():
     turtle.backward(10) # Values subject to change
     print(turtle.xcor())
@@ -28,7 +28,7 @@ def back():
     elif turtle.ycor() < -270.0:
         turtle.reset()
     obst(turtle,xpositions, ypositions)
-    collision(xpositions, ypositions)
+   
 def left():
     turtle.left(90)    # Values subject to change
 
@@ -51,30 +51,30 @@ turtle.bgcolor("red")
 
 xpositions = []
 ypositions = []    
-    
+
+dist = 200
+for i in range(5):
+        
+    tur1 = turtle.Turtle()
+        
+    tur1.shape('triangle')
+        
+    tur1.penup()
+    tur1.goto(0,0)
+    tur1.forward(dist)
+    tur1.left(90)
+    tur1.pendown()
+    xpositions.append(tur1.xcor())
+    ypositions.append(tur1.ycor())
+    print(xpositions)
+    print(ypositions)
+    dist = dist + 100  
 def obst(turtle,xpositions, ypositions):
     
-    dist = 200
-    for i in range(5):
-        
-        tur1 = turtle.Turtle()
-        
-        tur1.shape('triangle')
-        
-        tur1.penup()
-        tur1.goto(0,0)
-        tur1.forward(dist)
-        tur1.left(90)
-        tur1.pendown()
-        xpositions.append(tur1.xcor())
-        ypositions.append(tur1.ycor())
-        print(xpositions)
-        print(ypositions)
-        dist = dist + 100
-    return xpositions, ypositions
-
-def collision(xpositions, ypositions):
+  
+   
     x = 0
+    
     for i in xpositions:
         print(int(xpositions[x]) - int(turtle.xcor()))
         if int(xpositions[x]) - int(turtle.xcor()) <= abs(1) and int(ypositions[x]) - int(turtle.ycor()) <= abs(1):
