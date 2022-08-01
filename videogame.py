@@ -79,7 +79,7 @@ def obst(turtle,xpositions, ypositions):
         print(int(xpositions[x]) - int(turtle.xcor()))
         if int(xpositions[x]) - int(turtle.xcor()) <= abs(1) and int(ypositions[x]) - int(turtle.ycor()) <= abs(1):
             turtle.reset()
-            turtle.clearscreen()
+            
 
             
         x = x + 1
